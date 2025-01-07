@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "figure.h"
-#include "transform_functions.c"
 
 int main() {
     Figure figures[3];

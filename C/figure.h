@@ -32,4 +32,9 @@ typedef struct {
     };
 } Figure;
 
+
+void scale(Figure *figure, int scale_factor);
+void xlate(Figure *figure, int x_offset, int y_offset);
+void print(Figure *figure);
+
 #endif

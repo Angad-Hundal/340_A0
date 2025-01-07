@@ -2,36 +2,36 @@
 #include <stdio.h>
 #include "figure.h"
 
-void scale(Figure *figure, int factor) {
+void scale(Figure *figure, int scale_factor) {
     switch (figure->type) {
         case CIRCLE:
-            figure->circle.radius *= factor;
+            figure->circle.radius *= scale_factor;
             break;
         case RECTANGLE:
-            figure->rectangle.upper_x = figure->rectangle.lower_x + (figure->rectangle.upper_x - figure->rectangle.lower_x) * factor;
-            figure->rectangle.upper_y = figure->rectangle.lower_y + (figure->rectangle.upper_y - figure->rectangle.lower_y) * factor;
+            figure->rectangle.upper_x = figure->rectangle.lower_x + (figure->rectangle.upper_x - figure->rectangle.lower_x) * scale_factor;
+            figure->rectangle.upper_y = figure->rectangle.lower_y + (figure->rectangle.upper_y - figure->rectangle.lower_y) * scale_factor;
             break;
         case LINE:
-            figure->line.line_length *= factor;
+            figure->line.line_length *= scale_factor;
             break;
     }
 }
 
-void xlate(Figure *figure, int dx, int dy) {
+void xlate(Figure *figure, int x_offset, int y_offset) {
     switch (figure->type) {
         case CIRCLE:
-            figure->circle.centre_x += dx;
-            figure->circle.centre_y += dy;
+            figure->circle.centre_x += x_offset;
+            figure->circle.centre_y += y_offset;
             break;
         case RECTANGLE:
-            figure->rectangle.lower_x += dx;
-            figure->rectangle.lower_y += dy;
-            figure->rectangle.upper_x += dx;
-            figure->rectangle.upper_y += dy;
+            figure->rectangle.lower_x += x_offset;
+            figure->rectangle.lower_y += y_offset;
+            figure->rectangle.upper_x += x_offset;
+            figure->rectangle.upper_y += y_offset;
             break;
         case LINE:
-            figure->line.start_x += dx;
-            figure->line.start_y += dy;
+            figure->line.start_x += x_offset;
+            figure->line.start_y += y_offset;
             break;
     }
 }
