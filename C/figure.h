@@ -1,5 +1,5 @@
-#ifndef FIGURES_H
-#define FIGURES_H
+#ifndef FIGURE_H
+#define FIGURE_H
 
 
 typedef struct {
@@ -15,7 +15,7 @@ typedef struct {
 
 
 typedef struct {
-    int start_x, starty;  
+    int start_x, start_y;  
     int line_angle; 
     int line_length; 
 } Line;
