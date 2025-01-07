@@ -20,16 +20,28 @@ public class Main {
 
 
         Point upper_right = new Point(3,7);
-        Rectangle rectangle_example_one = new Rectangle(centre_point, upper_right);
-        rectangle_example_one.print();
+//        Rectangle rectangle_example_one = new Rectangle(centre_point, upper_right);
+//        rectangle_example_one.print();
+//
+//
+//        rectangle_example_one.scale(2);
+//        rectangle_example_one.print();
+//
+//
+//        rectangle_example_one.xlate(-5,4);
+//        rectangle_example_one.print();
 
 
-        rectangle_example_one.scale(2);
-        rectangle_example_one.print();
+        Line line_example_one = new Line(centre_point, 45, 7);
+        line_example_one.print();
 
 
-        rectangle_example_one.xlate(-5,4);
-        rectangle_example_one.print();
+        line_example_one.scale(3);
+        line_example_one.print();
+
+        line_example_one.xlate(7,9);
+        line_example_one.print();
+
 
     }
 }
