@@ -3,44 +3,21 @@
 public class Main {
     public static void main(String[] args) {
 
-        Point centre_point = new Point(0,0);
-//        Circle circle_example = new Circle(centre_point,5);
-//        circle_example.print();
-//
-//        circle_example.scale(2);
-//        circle_example.print();
-//
-//
-//        circle_example.xlate(2,7);
-//        circle_example.print();
-//
-//
-//        circle_example.scale(0);
-//        circle_example.print();
+        final int ORIGIN_X = 0;
+        final int ORIGIN_Y = 0;
+
+        Circle origin_circle = new Circle(new Point(ORIGIN_X,ORIGIN_Y), 1);
+        Rectangle rectangle_example = new Rectangle(new Point(-3,2), new Point(-1,3));
+        Line line_example = new Line(new Point(1,-2),45,1);
+
+        Figure[] figures = {origin_circle, rectangle_example, line_example};
 
 
-        Point upper_right = new Point(3,7);
-//        Rectangle rectangle_example_one = new Rectangle(centre_point, upper_right);
-//        rectangle_example_one.print();
-//
-//
-//        rectangle_example_one.scale(2);
-//        rectangle_example_one.print();
-//
-//
-//        rectangle_example_one.xlate(-5,4);
-//        rectangle_example_one.print();
-
-
-        Line line_example_one = new Line(centre_point, 45, 7);
-        line_example_one.print();
-
-
-        line_example_one.scale(3);
-        line_example_one.print();
-
-        line_example_one.xlate(7,9);
-        line_example_one.print();
+        for (Figure figure: figures){
+            figure.xlate(2,3);
+            figure.scale(2);
+            figure.print();
+        }
 
 
     }

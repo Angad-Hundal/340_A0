@@ -15,7 +15,7 @@ public class Line extends Figure{
 
     @Override
     public void print() {
-        System.out.printf("Line@ (%d,%d) with angle %d° and length %d) \n", lower_left_vertex.x, lower_left_vertex.y, angle, length);
+        System.out.printf("Line@ (%d,%d) with angle %d° and length %d \n", lower_left_vertex.x, lower_left_vertex.y, angle, length);
 
     }
 
