@@ -12,6 +12,8 @@ if [ $? -eq 0 ]; then
     jar cvf $JAR_NAME -C $BIN_DIR .
 
     echo "$JAR_NAME"
+
+    java -jar $JAR_NAME
 else
     echo "Compilation failed."
 fi
