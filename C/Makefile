@@ -15,6 +15,7 @@ transforms.o: transform_functions.c figure.h
 
 $(TARGET): $(OBJ)
 	$(CC) $(OBJ) -o $(TARGET)
+	./$(TARGET)
 
 clean:
 	rm -f $(OBJ) $(TARGET)
